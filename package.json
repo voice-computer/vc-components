@@ -1,0 +1,50 @@
+{
+  "name": "vc-components",
+  "version": "1.0.0",
+  "description": "Voice Computer component library",
+  "main": "dist/index.js",
+  "repository": "https://github.com/joshferrell/vc-components",
+  "author": "<josh@joshferrell.me>",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "@storybook/addon-actions": "^3.4.5",
+    "@storybook/addon-backgrounds": "^3.4.5",
+    "@storybook/addon-console": "^1.0.0",
+    "@storybook/addon-info": "^3.4.5",
+    "@storybook/addon-knobs": "^3.4.5",
+    "@storybook/addon-links": "^3.4.5",
+    "@storybook/addon-viewport": "^3.4.5",
+    "@storybook/addons": "^3.4.5",
+    "@storybook/react": "^3.4.5",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.3",
+    "babel-jest": "^22.4.4",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-module-resolver": "^3.1.1",
+    "babel-plugin-transform-export-extensions": "^6.22.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-runtime": "^6.26.0",
+    "jest": "^22.4.4",
+    "polished": "^1.9.2",
+    "react-dom": "^16.3.2",
+    "storybook-addon-a11y": "^3.1.9",
+    "storybook-react-router": "^1.0.1",
+    "styled-system": "^2.2.5",
+    "system-components": "^2.0.3",
+    "webpack": "^4.8.3"
+  },
+  "peerDependencies": {
+    "react": "^16.3.2",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "styled-components": "^3.2.6"
+  },
+  "dependencies": {},
+  "scripts": {
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  }
+}

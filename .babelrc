@@ -1,0 +1,21 @@
+{
+    "presets": [
+        "env",
+        "react",
+        "stage-2"
+    ],
+    "plugins": [
+        "transform-object-rest-spread",
+		["module-resolver", {
+            "root": ["./src"],
+            "alias": {
+                "utils": "./src/utils",
+                "theme": "./src/theme",
+                "atoms": "./src/atoms",
+                "styles": "./src/styles",
+                "organisms": "./src/organisms",
+                "static": "./src/static"
+            }
+        }]
+    ]
+}
