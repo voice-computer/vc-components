@@ -3,6 +3,8 @@ import { configure, addDecorator, setAddon } from '@storybook/react';
 import backgrounds from "@storybook/addon-backgrounds";
 import infoAddon, { setDefaults } from '@storybook/addon-info';
 import StoryRouter from 'storybook-react-router';
+import { checkA11y } from 'storybook-addon-a11y';
+import { withKnobs } from '@storybook/addon-knobs/react';
 import '@storybook/addon-console';
 
 import Theme from 'theme';
@@ -15,6 +17,8 @@ setAddon(infoAddon);
 
 // Configure storybook react router
 addDecorator(StoryRouter());
+addDecorator(withKnobs);
+addDecorator(checkA11y);
 
 // Configure background options
 const backgroundOptions = [

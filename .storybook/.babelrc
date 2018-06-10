@@ -15,11 +15,5 @@
                 "styles": "./src/styles"
             }
         }]
-    ],
-	"ignore": [
-        "**/**.stories.js",
-        "**/**.spec.js",
-        "**/**.test.js",
-        "**/__test__/"
-	]
+    ]
 }

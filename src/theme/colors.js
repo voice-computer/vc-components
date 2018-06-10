@@ -5,8 +5,8 @@ const primary = {
 };
 
 const secondary = {
-	main: '#f7f7f7',
-	secondary: '#2b2b2b',
+	main: '#eeeff1',
+	secondary: '#202D4A',
 	tertiary: '#5677fc'
 };
 
@@ -23,11 +23,22 @@ const highlight = {
 	yellow: '#ffeb3b'
 };
 
+const neutral = [
+	'#fafafa',
+	'#eeeff1',
+	'#d2d5db',
+	'#a6abb7',
+	'#4d586f',
+	'#202D4A',
+	'#1a2a4d'
+];
+
 const colors = {
 	primary,
 	secondary,
 	tertiary,
-	highlight
+	highlight,
+	neutral
 };
 
 export default colors;

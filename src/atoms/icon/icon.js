@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
-import { space } from 'styled-system';
+import { space, color } from 'styled-system';
 import iconMapper, { icons } from './icon-names';
 
 // size is one of xs, s, md, lg, xl
@@ -28,7 +28,7 @@ const oddStroke = css`
 
 const baseStyles = css`
 	display: inline-block;
-	color: #111111;
+	${color};
 
 	use {
 		fill: inherit;
@@ -94,6 +94,7 @@ Icon.propTypes = {
 	name: PropTypes.oneOf(Object.keys(icons)).isRequired,
 	title: PropTypes.string,
 	description: PropTypes.string,
+	color: PropTypes.string,
 	type: PropTypes.oneOf(['glyph', 'outline', 'colored']),
 	strokeSize: PropTypes.oneOf([1, 2, 3, 4]),
 	iconSize: PropTypes.oneOf(['xs', 'sm', 'md', 'lg', 'xl'])
@@ -101,6 +102,7 @@ Icon.propTypes = {
 
 Icon.defaultProps = {
 	title: null,
+	color: '#111111',
 	description: null,
 	type: 'glyph',
 	strokeSize: 2,

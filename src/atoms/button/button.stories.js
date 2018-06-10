@@ -3,16 +3,13 @@ import React from 'react';
 /* eslint-disable import/no-extraneous-dependencies */
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { checkA11y } from 'storybook-addon-a11y';
 import { withInfo } from '@storybook/addon-info';
-import { withKnobs, boolean, text, select } from '@storybook/addon-knobs/react';
+import { boolean, text, select } from '@storybook/addon-knobs/react';
 /* eslint-enable import/no-extraneous-dependencies */
 
-import { Button, ButtonLink, ArrowButton, ArrowButtonLink } from 'atoms';
+import { Button, ButtonLink, ArrowButton } from 'atoms';
 
 storiesOf('Atoms/Buttons', module)
-	.addDecorator(checkA11y)
-	.addDecorator(withKnobs)
 	.add(
 		'simple button',
 		withInfo(`

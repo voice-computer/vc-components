@@ -27,9 +27,17 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-stage-2": "^6.24.1",
     "babel-runtime": "^6.26.0",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-import-resolver-babel-module": "^4.0.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jest": "^21.17.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.9.1",
     "jest": "^22.4.4",
     "polished": "^1.9.2",
     "react-dom": "^16.3.2",
+    "react-router": "^4.2.0",
     "storybook-addon-a11y": "^3.1.9",
     "storybook-react-router": "^1.0.1",
     "styled-system": "^2.2.5",
@@ -39,10 +47,13 @@
   "peerDependencies": {
     "react": "^16.3.2",
     "react-router": "^4.2.0",
-    "react-router-dom": "^4.2.2",
     "styled-components": "^3.2.6"
   },
-  "dependencies": {},
+  "dependencies": {
+    "clean-tag": "^1.0.4",
+    "gatsby-link": "^1.6.44",
+    "react-router-dom": "^4.3.1"
+  },
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"

@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
 import { Icon, Button, ButtonLink } from 'atoms';
 
 const buttonProps = {
@@ -8,7 +7,8 @@ const buttonProps = {
 	large: PropTypes.bool,
 	squared: PropTypes.bool,
 	outline: PropTypes.bool,
-	nostyle: PropTypes.bool
+	nostyle: PropTypes.bool,
+	children: PropTypes.node.isRequired
 };
 
 const buttonDefaultProps = {
@@ -23,6 +23,7 @@ export const ArrowButton = ({ children, ...props }) => (
 	<Button {...props}>
 		{children}
 		<Icon
+			color={`${props.type}.tertiary`}
 			name="rightArrow"
 			type="glyph"
 			strokeSize={4}
@@ -40,6 +41,7 @@ export const ArrowButtonLink = ({ children, ...props }) => (
 	<ButtonLink {...props}>
 		{children}
 		<Icon
+			color={`${props.type}.tertiary`}
 			name="rightArrow"
 			type="glyph"
 			strokeSize={4}
