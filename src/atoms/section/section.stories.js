@@ -24,4 +24,4 @@ storiesOf('Atoms/Section', module)
 				This is an example
 			</SectionText>
 		</SectionContainer>
-	))
+	));

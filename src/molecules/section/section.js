@@ -1,17 +1,30 @@
 import React from 'react';
+import styled from 'styled-components';
+import { color, space } from 'styled-system';
 import PropTypes from 'prop-types';
 import { SectionContainer, SectionTitle, SectionText } from 'atoms';
+
+const Divider = styled.hr.attrs({
+	bg: props => (props.type ? `highlight.${props.type}` : 'red')
+})`
+	${color};
+	${space};
+
+	border: none;
+	max-width: 12rem;
+	height: 2px;
+`;
 
 const Section = ({
 	titleAttributes,
 	subtitleAttributes,
-	textAttributes,
 	renderFooter,
 	center,
+	children,
+	headerDivider,
 	...props
 }) => {
 	const { text: titleText, ...titleProps } = titleAttributes;
-	const { text: textContent, ...textProps } = textAttributes;
 	const { text: subtitleText, ...subtitleProps } = subtitleAttributes;
 
 	const renderSectionHeader = Boolean(subtitleText || titleText);
@@ -20,23 +33,21 @@ const Section = ({
 		<SectionContainer {...props}>
 			{renderSectionHeader && (
 				<header>
-					{titleText && <SectionTitle {...titleProps}>{titleText}</SectionTitle>}
+					{titleText && <SectionTitle fontWeight={700} {...titleProps}>{titleText}</SectionTitle>}
 					{subtitleText && <SectionTitle {...subtitleProps}>{subtitleText}</SectionTitle>}
 				</header>
 			)}
-			{textContent && textContent.map(text => (
-				<SectionText {...textProps}>{text}</SectionText>
-			))}
-			{renderFooter && renderFooter()}
+			<div>
+				{headerDivider && <Divider type={headerDivider} my={5} />}
+				{children && children}
+				{renderFooter && renderFooter()}
+			</div>
 		</SectionContainer>
 	);
 };
 
 Section.propTypes = {
 	titleAttributes: PropTypes.shape({
-		text: PropTypes.string
-	}),
-	textAttributes: PropTypes.shape({
 		text: PropTypes.string
 	}),
 	subtitleAttributes: PropTypes.shape({
@@ -52,9 +63,6 @@ Section.defaultProps = {
 		text: null,
 		is: 'h3',
 		fontSize: 2
-	},
-	textAttributes: {
-		text: null
 	},
 	renderFooter: null,
 	subtitleAttributes: {

@@ -3,8 +3,12 @@ import { css } from 'styled-components';
 import { fontSize } from 'utils';
 
 export const SectionTitle = sys(
-	{ m: 0 },
+	{
+ 		m: 0,
+		fontSize: 2,
+	},
 	'color',
+	'fontWeight',
 	'lineHeight',
 	'display',
 	'maxWidth',
@@ -25,6 +29,10 @@ export const SectionText = sys(
 );
 
 export const SectionContainer = sys(
-	{ m: 0 },
-	'color', 'flex', 'flexWrap', 'flexDirection', 'justifyContent', 'alignItems'
+	{
+		m: 0,
+		display: 'flex',
+		flexDirection: 'column'
+	},
+	'color', 'flex', 'flexWrap', 'justifyContent', 'alignItems'
 );

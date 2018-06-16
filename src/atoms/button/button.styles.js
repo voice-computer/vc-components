@@ -10,7 +10,7 @@ export const buttonStyles = css`
 	justify-content: center;
 	letter-spacing: 1px;
 	border: none;
-	border-radius: ${props => (props.squared ? 0 : '4px')};
+	border-radius: 0;
 	cursor: pointer;
 	transition: all .1s linear;
 	text-decoration: none;
