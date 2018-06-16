@@ -15,8 +15,8 @@
     "@storybook/addon-knobs": "^3.4.5",
     "@storybook/addon-links": "^3.4.5",
     "@storybook/addon-viewport": "^3.4.5",
-    "@storybook/addons": "^3.4.5",
-    "@storybook/react": "^3.4.5",
+    "@storybook/addons": "^3.4.7",
+    "@storybook/react": "^3.4.7",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.3",
@@ -41,8 +41,7 @@
     "storybook-addon-a11y": "^3.1.9",
     "storybook-react-router": "^1.0.1",
     "styled-system": "^2.2.5",
-    "system-components": "^2.0.3",
-    "webpack": "^4.8.3"
+    "system-components": "^2.0.3"
   },
   "peerDependencies": {
     "react": "^16.3.2",
