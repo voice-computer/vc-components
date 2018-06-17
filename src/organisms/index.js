@@ -1,1 +1,5 @@
-export { DesktopMenu } from './menu';
+import { DesktopMenu } from './menu';
+
+module.exports = {
+	DesktopMenu
+};

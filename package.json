@@ -1,6 +1,6 @@
 {
   "name": "vc-components",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Voice Computer component library",
   "main": "dist/index.js",
   "repository": "https://github.com/joshferrell/vc-components",
@@ -54,11 +54,12 @@
   "dependencies": {
     "clean-tag": "^1.0.4",
     "gatsby-link": "^1.6.44",
-    "react-router-dom": "^4.3.1"
+    "react-router-dom": "^4.3.1",
+    "webfontloader": "^1.6.28"
   },
   "scripts": {
     "storybook": "start-storybook -p 6006",
-	"lint": "eslint src/",
+    "lint": "eslint src/",
     "prepublish": "npm run build",
     "build:docs": "build-storybook",
     "build": "webpack"

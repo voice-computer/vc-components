@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled, { ThemeProvider } from 'styled-components';
 import { themeGet } from 'styled-system';
+import webFont from 'webfontloader';
 import { systemFonts } from 'utils';
 import { lighten } from 'polished';
 import colors from './colors';
@@ -30,6 +31,10 @@ const BaseFont = styled.div`
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 
+	body {
+		margin: 0;
+	}
+
 	button,
 	input,
 	optgroup,
@@ -43,16 +48,24 @@ const BaseFont = styled.div`
 	}
 `;
 
-const VoiceTheme = ({ children }) => (
-	<ThemeProvider theme={theme}>
-		<BaseFont>
-			{children}
-		</BaseFont>
-	</ThemeProvider>
-);
+export default class VoiceTheme extends Component {
+	static propTypes = {
+		children: PropTypes.node.isRequired
+	}
 
-VoiceTheme.propTypes = {
-	children: PropTypes.node.isRequired
-};
+	componentDidMount() {
+		webFont.load({
+			google: {
+				families: ['Poppins:400,400i,500,600,700']
+			}
+		});
+	}
 
-export default VoiceTheme;
+	render = () => (
+		<ThemeProvider theme={theme}>
+			<BaseFont>
+				{this.props.children}
+			</BaseFont>
+		</ThemeProvider>
+	)
+}
