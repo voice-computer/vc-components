@@ -14,3 +14,4 @@ export {
 } from './nav';
 export { Input, Label } from './form';
 export { SectionTitle, SectionText, SectionContainer } from './section';
+export { default as Container } from './container';
