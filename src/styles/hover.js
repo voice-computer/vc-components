@@ -3,12 +3,11 @@ import { lighten, darken } from 'polished';
 import { themeGet } from 'styled-system';
 
 const color = (props) => {
-	const color = themeGet(`colors.${props.type}.main`)(props);
+	const newColor = themeGet(`colors.${props.type}.main`)(props);
 	return props.type === 'secondary' ?
-		darken(0.1, color) :
-		lighten(0.1, color);
-
-}
+		darken(0.1, newColor) :
+		lighten(0.1, newColor);
+};
 
 const hover = css`
 	&:hover:not(:active):not(:focus) {

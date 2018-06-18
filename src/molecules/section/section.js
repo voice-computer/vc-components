@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { color, space } from 'styled-system';
 import PropTypes from 'prop-types';
-import { SectionContainer, SectionTitle, SectionText } from 'atoms';
+import { SectionContainer, SectionTitle } from 'atoms';
 
 const Divider = styled.hr.attrs({
 	bg: props => (props.type ? `highlight.${props.type}` : 'red')
@@ -56,7 +56,8 @@ Section.propTypes = {
 	}),
 	renderFooter: PropTypes.func,
 	headerDivider: PropTypes.string,
-	center: PropTypes.bool
+	center: PropTypes.bool,
+	children: PropTypes.node
 };
 
 Section.defaultProps = {
@@ -72,7 +73,8 @@ Section.defaultProps = {
 		fontSize: 1
 	},
 	headerDivider: null,
-	center: false
+	center: false,
+	children: null
 };
 
 export default Section;

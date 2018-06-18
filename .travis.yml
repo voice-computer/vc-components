@@ -1,0 +1,20 @@
+language: node_js
+node_js:
+- '8'
+jobs:
+  include:
+  - stage: Test Components
+    script:
+    - yarn lint
+    - yarn test
+  - stage: Deploy To NPM
+    deploy:
+      provider: npm
+      email: josh@joshferrell.me
+      api_key:
+          secure: $NPM_API_KEY
+      on:
+        branch: production
+  - stage: Update Storybook Documentation
+    script:
+    - yarn publish:docs --host-token-env-variable=$GITHUB_TOKEN

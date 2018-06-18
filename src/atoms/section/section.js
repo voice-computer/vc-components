@@ -1,5 +1,4 @@
 import sys from 'system-components';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { css } from 'styled-components';
 import { fontSize } from 'utils';

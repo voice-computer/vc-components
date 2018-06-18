@@ -3,10 +3,9 @@ import PropTypes from 'prop-types';
 import styled, { ThemeProvider } from 'styled-components';
 import { themeGet } from 'styled-system';
 import { systemFonts } from 'utils';
-import { lighten } from 'polished';
 import colors from './colors';
 
-const theme = {
+export const theme = {
 	fonts: {
 		0: `Poppins, ${systemFonts}`
 	},

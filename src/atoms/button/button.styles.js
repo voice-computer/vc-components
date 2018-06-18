@@ -1,7 +1,7 @@
 import { css } from 'styled-components';
 import { fontSize } from 'utils';
 import { hover, nostyle, outline, color } from 'styles';
-import { space, themeGet, propTypes } from 'styled-system';
+import { space, themeGet } from 'styled-system';
 
 export const buttonStyles = css`
 	display: inline-flex;

@@ -16,10 +16,9 @@
             }
         }]
     ],
-	"ignore": [
-        "**/**.stories.js",
-        "**/**.spec.js",
-        "**/**.test.js",
-        "**/__test__/"
-	]
+	"env": {
+		"test": {
+			"plugins": ["require-context-hook"]
+		}
+	}
 }

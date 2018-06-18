@@ -29,6 +29,9 @@
     "settings": {
         "import/resolver": {
           "babel-module": {}
-        }
+        },
+        "import/core-modules": [
+            "prop-types"
+        ]
     }
 }

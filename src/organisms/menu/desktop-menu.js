@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Logo, ButtonLink, HiddenText, Nav, SiteTitle } from 'atoms';
 
+/* eslint-disable react/prefer-stateless-function */
 export default class DesktopMenu extends Component {
 	static propTypes = {
 		renderLeftNav: PropTypes.func,

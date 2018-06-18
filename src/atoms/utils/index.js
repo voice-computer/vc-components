@@ -1,1 +1,1 @@
-export { default as HiddenText } from './hidden-text';
+export { default as HiddenText } from './hidden-text'; //eslint-disable-line
