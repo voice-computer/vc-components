@@ -9,6 +9,7 @@ const nostyle = css`
 	background: transparent;
 	border-color: transparent;
 	color: ${mainColor};
+	padding: 8px 0 !important;
 
 	svg {
 		color: ${mainColor};

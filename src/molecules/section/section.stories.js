@@ -5,8 +5,8 @@ import { storiesOf } from '@storybook/react';
 import { object, select } from '@storybook/addon-knobs/react';
 /* eslint-enable import/no-extraneous-dependencies */
 
-import Section from './section';
 import { SectionText } from 'atoms';
+import Section from './section';
 
 storiesOf('Molecules/Section', module)
 	.add('simple input', () => (

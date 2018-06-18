@@ -12,6 +12,7 @@ const Divider = styled.hr.attrs({
 
 	border: none;
 	max-width: 12rem;
+	width: 250px;
 	height: 2px;
 `;
 

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled, { ThemeProvider } from 'styled-components';
 import { themeGet } from 'styled-system';
-import webFont from 'webfontloader';
 import { systemFonts } from 'utils';
 import { lighten } from 'polished';
 import colors from './colors';
@@ -54,11 +53,14 @@ export default class VoiceTheme extends Component {
 	}
 
 	componentDidMount() {
-		webFont.load({
-			google: {
-				families: ['Poppins:400,400i,500,600,700']
-			}
-		});
+		if (typeof window !== 'undefined') {
+			const webFont = require('webfontloader'); // eslint-disable-line
+			webFont.load({
+				google: {
+					families: ['Poppins:400,400i,500,600,700']
+				}
+			});
+		}
 	}
 
 	render = () => (

@@ -1,12 +1,11 @@
 {
   "name": "vc-components",
-  "version": "1.0.3",
+  "version": "1.0.16",
   "description": "Voice Computer component library",
   "main": "dist/index.js",
   "repository": "https://github.com/joshferrell/vc-components",
   "author": "<josh@joshferrell.me>",
   "license": "MIT",
-  "private": false,
   "devDependencies": {
     "@storybook/addon-actions": "^3.4.5",
     "@storybook/addon-backgrounds": "^3.4.5",
