@@ -25,8 +25,8 @@ export const ArrowButton = ({ children, ...props }) => (
 		<Icon
 			color={`${props.type}.tertiary`}
 			name="rightArrow"
-			type="glyph"
-			strokeSize={4}
+			type="outline"
+			strokeSize={3}
 			iconSize="sm"
 			aria-hidden
 			pl={3}
@@ -43,8 +43,8 @@ export const ArrowButtonLink = ({ children, ...props }) => (
 		<Icon
 			color={`${props.type}.tertiary`}
 			name="rightArrow"
-			type="glyph"
-			strokeSize={4}
+			type="outline"
+			strokeSize={3}
 			iconSize="sm"
 			aria-hidden
 			pl={3}

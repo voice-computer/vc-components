@@ -11,6 +11,13 @@ const Container = styled(tag.div).attrs({
 })`
 	line-height: 1.5;
 	max-width: 1440px;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+
+	main {
+		flex: 1;
+	}
 
 	${color};
 	${space};

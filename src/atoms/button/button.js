@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { Link as RouterLink } from 'react-router-dom';;
+import Link from 'gatsby-link';
 import { buttonStyles, buttonAttributes } from './button.styles';
 
 const buttonProps = {
@@ -29,7 +29,7 @@ Button.defaultProps = buttonDefaultProps;
 
 const LocalLink = styled(({
 	large, type, outline, nostyle, squared, extraLarge, ...props
-}) => <RouterLink {...props} />).attrs(buttonAttributes)`
+}) => <Link {...props} />).attrs(buttonAttributes)`
 	${buttonStyles};
 `;
 

@@ -29,6 +29,6 @@ export const buttonStyles = css`
 
 export const buttonAttributes = {
 	fontSize: props => (props.extraLarge ? [3, 4] : props.large ? [2, 3] : 1),
-	px: props => props.px || [4, 5],
+	px: props => (props.px || [4, 5]),
 	py: props => (props.py || props.large ? 4 : [2, 3])
 };

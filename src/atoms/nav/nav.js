@@ -9,7 +9,7 @@ export const SiteTitle = styled(tag.h1).attrs({
 })`
 	margin: 0;
 	height: 80px;
-	display: inline-flex;
+	display: inline-block;
 	transition: all .2s linear;
 	${maxWidth};
 `;
