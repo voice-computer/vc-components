@@ -5,7 +5,7 @@ import tag from 'clean-tag';
 
 const input = styled(tag.input).attrs({
 	px: 3,
-	py: 1,
+	py: props => props.py || 1,
 	borderColor: props => (props.gray ? 'transparent' : 'neutral.2'),
 	bg: props => (props.gray ? 'neutral.1' : 'white'),
 	fontSize: props => (props.large ? [1, 2] : 1)

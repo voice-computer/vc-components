@@ -1,20 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
-import { color, space } from 'styled-system';
 import PropTypes from 'prop-types';
-import { SectionContainer, SectionTitle } from 'atoms';
-
-const Divider = styled.hr.attrs({
-	bg: props => (props.type ? `highlight.${props.type}` : 'red')
-})`
-	${color};
-	${space};
-
-	border: none;
-	max-width: 12rem;
-	width: 250px;
-	height: 2px;
-`;
+import { SectionContainer, SectionTitle, Divider } from 'atoms';
 
 const Section = ({
 	titleAttributes,

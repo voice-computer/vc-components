@@ -1,6 +1,6 @@
 import { css } from 'styled-components';
 import { fontSize } from 'utils';
-import { hover, nostyle, outline, color } from 'styles';
+import { hover, nostyle, outline, color, width } from 'styles';
 import { space, themeGet } from 'styled-system';
 
 export const buttonStyles = css`
@@ -25,6 +25,7 @@ export const buttonStyles = css`
 	${space};
 	${color};
 	${fontSize};
+	${width};
 `;
 
 export const buttonAttributes = {

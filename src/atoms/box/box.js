@@ -18,7 +18,8 @@ const Box = sys(
 	'maxHeight',
 	'width',
 	'height',
-	'boxShadow'
+	'boxShadow',
+	'textAlign'
 );
 
 export default Box;

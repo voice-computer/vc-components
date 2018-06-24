@@ -19,6 +19,7 @@ export default class InlineForm extends Component {
 			type: PropTypes.string.isRequired,
 			name: PropTypes.string.isRequired
 		}).isRequired,
+		largeInput: PropTypes.bool,
 		inputValue: PropTypes.string,
 		buttonAttributes: PropTypes.shape({
 			type: PropTypes.string,
@@ -29,7 +30,8 @@ export default class InlineForm extends Component {
 	}
 
 	static defaultProps = {
-		inputValue: ''
+		inputValue: '',
+		largeInput: false
 	}
 
 	state = { inputValue: this.props.inputValue }
@@ -44,7 +46,9 @@ export default class InlineForm extends Component {
 	}
 
 	render() {
-		const { inputAttributes, buttonAttributes, label } = this.props;
+		const {
+			inputAttributes, buttonAttributes, label
+		} = this.props;
 		const { text, ...attributes } = buttonAttributes;
 		return (
 			<Form onSubmit={this.handleSubmit}>

@@ -3,10 +3,10 @@ import * as IconListing from './icon-listing';
 
 export const icons = {
 	rightArrow: 'RightArrow',
-	clock: 'Clock',
-	award: 'Award',
-	price: 'Price',
-	simpleCheck: 'SimpleCheck'
+	google: 'Google',
+	chevron: 'Chevron',
+	check: 'Check',
+	minus: 'Minus'
 };
 
 const Icon = (icon, type) => {

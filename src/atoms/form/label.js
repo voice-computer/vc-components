@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { space } from 'styled-system';
 
 const blockedLabel = css`
 	display: flex;
@@ -28,6 +29,7 @@ const noStyle = css`
 `;
 
 const Label = styled.label`
+	${space};
 	${props => (props.nostyle ? noStyle : props.inline ? inlineLabel : blockedLabel)};
 `;
 

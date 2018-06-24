@@ -65,7 +65,7 @@ const SVGWrapper = styled.svg`
 	${prop => prop.type === 'outline' && outlineStyles};
 	${prop => prop.alignToText && alignToText};
 	${prop => (prop.strokeSize === 1 || prop.strokeSize === 3) && oddStroke};
-
+	${prop => (prop.rotate ? `transform: rotate(${prop.rotate});` : '')};
 
 	height: ${prop => iconSize[prop.iconSize]};
 	width: ${prop => iconSize[prop.iconSize]};
@@ -94,6 +94,7 @@ Icon.propTypes = {
 	name: PropTypes.oneOf(Object.keys(icons)).isRequired,
 	title: PropTypes.string,
 	description: PropTypes.string,
+	rotate: PropTypes.string,
 	color: PropTypes.string,
 	type: PropTypes.oneOf(['glyph', 'outline', 'colored']),
 	strokeSize: PropTypes.oneOf([1, 2, 3, 4]),
@@ -102,6 +103,7 @@ Icon.propTypes = {
 
 Icon.defaultProps = {
 	title: null,
+	rotate: null,
 	color: '#111111',
 	description: null,
 	type: 'glyph',

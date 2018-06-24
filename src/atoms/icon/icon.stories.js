@@ -17,5 +17,6 @@ storiesOf('Atoms/Icon', module)
 			type={select('Icon Type', ['glyph', 'outline', 'colored'])}
 			strokeSize={select('Stroke', [1, 2, 3, 4])}
 			iconSize={select('Size', ['xs', 'sm', 'md', 'lg', 'xl'])}
+			rotate={text('Rotation', '0deg')}
 		/>
 	));
