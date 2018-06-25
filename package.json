@@ -1,6 +1,6 @@
 {
   "name": "vc-components",
-  "version": "1.0.28",
+  "version": "1.0.29",
   "description": "Voice Computer component library",
   "main": "dist/index.js",
   "repository": "https://github.com/joshferrell/vc-components",
