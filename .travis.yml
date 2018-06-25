@@ -17,4 +17,4 @@ jobs:
         branch: production
   - stage: Update Storybook Documentation
     script:
-    - yarn publish:docs --host-token-env-variable=$GITHUB_TOKEN
+    - yarn publish:docs --ci --host-token-env-variable=$GITHUB_TOKEN

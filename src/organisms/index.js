@@ -1,5 +1,6 @@
-import { DesktopMenu } from './menu';
+import { DesktopMenu, MobileMenu } from './menu';
 
 module.exports = {
-	DesktopMenu
+	DesktopMenu,
+	MobileMenu
 };

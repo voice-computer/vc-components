@@ -10,7 +10,8 @@ export { HiddenText } from './utils';
 export {
 	SiteTitle,
 	Nav,
-	NavLink
+	NavLink,
+	DropdownButton
 } from './nav';
 export { Input, Label } from './form';
 export { SectionTitle, SectionText, SectionContainer } from './section';
@@ -19,3 +20,4 @@ export { DividerFooter } from './footer';
 export { default as Box } from './box';
 export { default as Divider } from './divider';
 export { TableContainer, TableSection, TableCell } from './table';
+export { default as Dropdown } from './dropdown';

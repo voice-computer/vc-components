@@ -1,13 +1,12 @@
 import { css } from 'styled-components';
 import { fontSize } from 'utils';
-import { hover, nostyle, outline, color, width } from 'styles';
-import { space, themeGet } from 'styled-system';
+import { hover, nostyle, outline, color } from 'styles';
+import { space, themeGet, height, width, justifyContent } from 'styled-system';
 
 export const buttonStyles = css`
 	display: inline-flex;
 	align-items: center;
 	font-weight: 600;
-	justify-content: center;
 	letter-spacing: 1px;
 	border: none;
 	border-radius: 0;
@@ -25,11 +24,14 @@ export const buttonStyles = css`
 	${space};
 	${color};
 	${fontSize};
+	${justifyContent};
 	${width};
+	${height};
 `;
 
 export const buttonAttributes = {
 	fontSize: props => (props.extraLarge ? [3, 4] : props.large ? [2, 3] : 1),
 	px: props => (props.px || [4, 5]),
-	py: props => (props.py || props.large ? 4 : [2, 3])
+	py: props => (props.py || props.large ? 4 : [2, 3]),
+	justifyContent: props => props.justifyContent || 'center'
 };

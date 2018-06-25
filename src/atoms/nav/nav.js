@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { fontSize } from 'utils';
-import { space, maxWidth, display, color, hover, borderColor } from 'styled-system';
+import { space, maxWidth, display, color, hover, borderColor, justifyContent } from 'styled-system';
 import Link from 'gatsby-link';
 import tag from 'clean-tag';
 
@@ -8,14 +8,14 @@ export const SiteTitle = styled(tag.h1).attrs({
 	maxWidth: ['80px', '80px', '174px']
 })`
 	margin: 0;
-	height: 80px;
 	display: inline-block;
 	transition: all .2s linear;
+	height: 80px;
 	${maxWidth};
 `;
 
 export const Nav = styled(tag.nav).attrs({
-	display: ['none', 'flex'],
+	display: 'flex',
 	borderColor: 'neutral.1'
 })`
 	align-items: stretch;
@@ -29,10 +29,11 @@ export const Nav = styled(tag.nav).attrs({
 	}
 
 	${borderColor};
+	${color};
 	${display};
 `;
 
-export const NavLink = styled(Link).attrs({
+export const DropdownButton = styled.button.attrs({
 	fontSize: 1,
 	px: [3, 3, 4],
 	color: 'neutral.4',
@@ -45,8 +46,30 @@ export const NavLink = styled(Link).attrs({
 	align-items: center;
 	justify-content: center;
 	text-decoration: none;
+	background: transparent;
+	border: none;
 	${fontSize};
 	${space};
 	${hover};
 	${color};
+`;
+
+export const NavLink = styled(Link).attrs({
+	fontSize: props => props.fontSize || 1,
+	px: [3, 3, 4],
+	color: props => props.color || 'neutral.4',
+	justifyContent: props => props.justifyContent || 'center',
+	hover: {
+		color: 'neutral.6',
+		textDecoration: 'underline'
+	}
+})`
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	${fontSize};
+	${space};
+	${hover};
+	${color};
+	${justifyContent};
 `;

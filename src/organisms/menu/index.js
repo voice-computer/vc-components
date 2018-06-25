@@ -1,1 +1,2 @@
-export { default as DesktopMenu } from './desktop-menu'; // eslint-disable-line
+export { default as DesktopMenu } from './desktop-menu';
+export { default as MobileMenu } from './mobile-menu';

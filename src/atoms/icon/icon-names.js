@@ -6,7 +6,9 @@ export const icons = {
 	google: 'Google',
 	chevron: 'Chevron',
 	check: 'Check',
-	minus: 'Minus'
+	minus: 'Minus',
+	menu: 'Menu',
+	close: 'Close'
 };
 
 const Icon = (icon, type) => {

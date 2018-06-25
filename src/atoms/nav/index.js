@@ -1,5 +1,6 @@
 export {
 	SiteTitle,
 	Nav,
-	NavLink
+	NavLink,
+	DropdownButton
 } from './nav';

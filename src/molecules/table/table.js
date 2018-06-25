@@ -34,7 +34,7 @@ export default class Table extends Component {
 				</TableSection>
 				<TableSection is="tbody">
 					{bodyCells.map((row, i) => (
-						<tr key={i}>{row.map(this.renderCell)}</tr>
+						<tr key={i}>{row.map(this.renderCell)}</tr> // eslint-disable-line
 					))}
 				</TableSection>
 			</TableContainer>

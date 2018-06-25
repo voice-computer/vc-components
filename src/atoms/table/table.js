@@ -8,6 +8,7 @@ export const TableContainer = sys(
 		bg: 'white'
 	},
 	'color',
+	'width',
 	'flex',
 	'flexWrap',
 	'justifyContent',
@@ -35,6 +36,7 @@ export const TableCell = sys(
 		bg: 'transparent'
 	},
 	'textAlign',
+	'maxWidth',
 	() => `
 		border-bottom: 1px solid;
 		border-color: #eeeff1;

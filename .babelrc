@@ -12,7 +12,8 @@
                 "utils": "./src/utils",
                 "theme": "./src/theme",
                 "atoms": "./src/atoms",
-                "styles": "./src/styles"
+                "styles": "./src/styles",
+				"swing": "./src/animations"
             }
         }]
     ],

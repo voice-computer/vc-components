@@ -19,7 +19,8 @@ const Box = sys(
 	'width',
 	'height',
 	'boxShadow',
-	'textAlign'
+	'textAlign',
+	'fontWeight'
 );
 
 export default Box;
