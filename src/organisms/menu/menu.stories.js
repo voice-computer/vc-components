@@ -6,6 +6,7 @@ import { boolean } from '@storybook/addon-knobs/react';
 /* eslint-enable import/no-extraneous-dependencies */
 
 import { ArrowButtonLink, NavLink, Box, Icon } from 'atoms';
+import { DropdownNav } from 'molecules';
 import DesktopMenu from './desktop-menu';
 import MobileMenu from './mobile-menu';
 
@@ -24,8 +25,12 @@ storiesOf('Organisms/Menu', module)
 				<Fragment>
 					<NavLink to="/product">Product</NavLink>
 					<NavLink to="/about">Pricing</NavLink>
-					<NavLink to="/support">Resources</NavLink>
-					<NavLink to="/support">About</NavLink>
+					<DropdownNav title="Resources" left="-83px">
+						test
+					</DropdownNav>
+					<DropdownNav title="About Us" left="-85px">
+						test
+					</DropdownNav>
 				</Fragment>
 			)}
 			renderRightNav={() => (

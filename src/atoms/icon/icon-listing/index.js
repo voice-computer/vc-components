@@ -5,3 +5,8 @@ export { default as Minus } from './minus';
 export { default as Check } from './check';
 export { default as Menu } from './menu';
 export { default as Close } from './close';
+export { default as Book } from './book';
+export { default as Chat } from './chat';
+export { default as Company } from './company';
+export { default as People } from './people';
+export { default as Phone } from './phone';

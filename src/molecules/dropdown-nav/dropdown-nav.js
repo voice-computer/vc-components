@@ -6,25 +6,45 @@ import { Dropdown, DropdownButton } from 'atoms';
 class DropdownNav extends Component {
 	static propTypes = {
 		title: PropTypes.string.isRequired,
-		children: PropTypes.node.isRequired
+		children: PropTypes.node.isRequired,
+		minWidth: PropTypes.string,
+		left: PropTypes.string
+	}
+
+	static defaultProps = {
+		left: null,
+		minWidth: null
 	}
 
 	state = { displayDropdown: false }
 
-	render = () => (
-		<li style={{ listStyleType: 'none' }}>
-			<DropdownButton>{this.props.title}</DropdownButton>
-			<div style={{ position: 'relative' }}>
-				{this.state.displayDropdown && (
+	render = () => {
+		const id = this.props.title.toLowerCase().split(' ').join('-');
+		const { displayDropdown } = this.state;
+
+		return (
+			<li style={{ listStyleType: 'none' }}>
+				<DropdownButton
+					id={id}
+					data-toggle="dropdown"
+					aria-haspopup
+					aria-expanded={displayDropdown}
+				>
+					{this.props.title}
+				</DropdownButton>
+				<div style={{ position: 'relative' }}>
 					<Dropdown
-						display={this.state.displayDropdown}
+						left={this.props.left}
+						minWidth={this.props.minWidth}
+						display={displayDropdown}
+						aria-labelledby={id}
 					>
 						{this.props.children}
 					</Dropdown>
-				)}
-			</div>
-		</li>
-	)
+				</div>
+			</li>
+		);
+	}
 }
 
 export default source({

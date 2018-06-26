@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { target } from 'react-aim';
 import { space, boxShadow, borderRadius } from 'styled-system';
-import { SwingIn } from 'animations';
+import { SwingIn, SwingOut } from 'animations';
 
 const Dropdown = styled.div.attrs({
 	p: [3, 4],
@@ -11,11 +11,14 @@ const Dropdown = styled.div.attrs({
 	position: absolute;
 	padding: 0;
 	display: inline-block;
-	left: 0;
-	top: 8px;
-	min-width: 250px;
+	left: ${props => props.left || '-50%'};
+	top: -8px;
+	background: white;
+	z-index: 500;
+	min-width: ${props => props.minWidth || '250px'};
 
-	${SwingIn};
+	${props => (props.display ? SwingIn : SwingOut)};
+	display: ${props => (props.display ? 'block' : 'none')};
 
 	&::after,
 	&::before {
@@ -32,7 +35,7 @@ const Dropdown = styled.div.attrs({
 		border-color: rgba(255, 255, 255, 0);
 		border-bottom-color: #ffffff;
 		border-width: 9px;
-		left: 35px;
+		left: 50%;
 		margin-left: -9px;
 	}
 
@@ -40,7 +43,7 @@ const Dropdown = styled.div.attrs({
 		border-color: rgba(113, 158, 206, 0);
 		border-bottom-color: #ececec;
 		border-width: 10px;
-		left: 35px;
+		left: 50%;
 		margin-left: -10px;
 	}
 

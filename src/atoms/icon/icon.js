@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
-import { space, color } from 'styled-system';
+import { space, color, hover } from 'styled-system';
 import iconMapper, { icons } from './icon-names';
 
 // size is one of xs, s, md, lg, xl
@@ -62,6 +62,7 @@ const alignToText = css`
 const SVGWrapper = styled.svg`
 	${baseStyles};
 	${space};
+	${hover};
 	${prop => prop.type === 'outline' && outlineStyles};
 	${prop => prop.alignToText && alignToText};
 	${prop => (prop.strokeSize === 1 || prop.strokeSize === 3) && oddStroke};
@@ -71,7 +72,6 @@ const SVGWrapper = styled.svg`
 	width: ${prop => iconSize[prop.iconSize]};
 
 	stroke-width: ${prop => strokeSize[prop.strokeSize]};
-
 `;
 
 const Icon = ({

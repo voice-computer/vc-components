@@ -4,7 +4,7 @@ export {
 	ArrowButton,
 	ArrowButtonLink
 } from './button';
-export { Icon } from './icon';
+export { Icon, IconCircle } from './icon';
 export { default as Logo } from './logo';
 export { HiddenText } from './utils';
 export {

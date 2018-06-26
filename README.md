@@ -4,9 +4,32 @@
 [![Coverage Status](https://coveralls.io/repos/github/voice-computer/vc-components/badge.svg?branch=master)](https://coveralls.io/github/voice-computer/vc-components?branch=master)
 [![NPM Version](https://img.shields.io/npm/v/vc-components.svg)](https://www.npmjs.com/package/vc-components)
 
-## Getting Started
+[View Component Library](http://voice-computer.github.io/vc-components)
 
+## Basic Usage
+```sh
+yarn add vc-components
 ```
+
+```javascript
+import React from 'react';
+import { Atoms } from 'vc-components';
+
+const HelloDemo = () => (
+	<Atoms.Button
+		type="primary"
+		onClick={() => { console.log('hello!'); }}
+	>
+		Hello world!
+	</Atoms.Button>
+);
+```
+
+[View the storybook component library](http://voice-computer.github.io/vc-components) for more details and previews of all the available components.
+
+## Start Development
+
+```sh
 yarn install
 yarn storybook
 ```

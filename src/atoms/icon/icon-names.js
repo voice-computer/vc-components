@@ -8,7 +8,12 @@ export const icons = {
 	check: 'Check',
 	minus: 'Minus',
 	menu: 'Menu',
-	close: 'Close'
+	close: 'Close',
+	phone: 'Phone',
+	people: 'People',
+	company: 'Company',
+	book: 'Book',
+	chat: 'Chat'
 };
 
 const Icon = (icon, type) => {

@@ -48,6 +48,7 @@ export const DropdownButton = styled.button.attrs({
 	text-decoration: none;
 	background: transparent;
 	border: none;
+	height: 100%;
 	${fontSize};
 	${space};
 	${hover};

@@ -19,19 +19,26 @@ const NavWrapper = styled.div`
 const Container = styled.div`
 	position: sticky;
 	top: 0;
+	display: none;
+
+	@media (max-width: 880px) {
+		display: block;
+	}
 `;
 
 export default class MobileMenu extends Component {
 	static propTypes = {
 		cta: PropTypes.bool,
+		className: PropTypes.string,
 		renderMenu: PropTypes.func.isRequired
 	}
 
 	static defaultProps = {
-		cta: false
+		cta: false,
+		className: ''
 	}
 
-	state = { expanded: true }
+	state = { expanded: false }
 
 	toggleMenu = () => this.setState(({ expanded }) => ({ expanded: !expanded }))
 
@@ -59,7 +66,7 @@ export default class MobileMenu extends Component {
 	)
 
 	render = () => (
-		<Container>
+		<Container className={this.props.className}>
 			<Nav bg="white">
 				<div>
 					<SiteTitle>

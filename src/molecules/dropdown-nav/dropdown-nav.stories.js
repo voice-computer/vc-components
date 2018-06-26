@@ -13,5 +13,11 @@ storiesOf('Molecules/Dropdown Nav', module)
 			<DropdownNav title={text('title', 'Test Link')}>
 				asdf
 			</DropdownNav>
+			<DropdownNav title={text('title', 'Test Link')}>
+				asdf
+			</DropdownNav>
+			<DropdownNav title={text('title', 'Test Link')}>
+				asdf
+			</DropdownNav>
 		</nav>
 	));
