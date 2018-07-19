@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
-import { color, display, height } from 'system-components';
+import { color, display, height, width } from 'system-components';
 
 import IconLogo from './icon-logo';
 import LandscapeLogo from './landscape-logo';
@@ -11,6 +11,7 @@ const LogoCSS = css`
 	${color};
 	${display};
 	${height};
+	${width};
 `;
 
 const Icon = styled(IconLogo)`${LogoCSS}`;

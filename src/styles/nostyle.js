@@ -1,9 +1,28 @@
 import { css } from 'styled-components';
 import { themeGet } from 'styled-system';
-import { lighten } from 'polished';
+import { lighten, darken } from 'polished';
 
-const darkenColor = props => lighten(0.2, themeGet(`colors.${props.type}.main`)(props));
-const mainColor = props => themeGet(`colors.${props.type}.main`)(props);
+const darkenColor = (props) => {
+	switch (props.type) {
+	case 'primary':
+		return lighten(0.1, '#0934db');
+	case 'secondary':
+		return lighten(0.3, themeGet(`colors.${props.type}.secondary`)(props));
+	default:
+		return darken(0.05, themeGet(`colors.${props.type}.main`)(props));
+	}
+};
+
+const mainColor = (props) => {
+	switch (props.type) {
+	case 'secondary':
+		return themeGet(`colors.${props.type}.secondary`)(props);
+	case 'primary':
+		return '#0934db';
+	default:
+		return themeGet(`colors.${props.type}.main`)(props);
+	}
+};
 
 const nostyle = css`
 	background: transparent;

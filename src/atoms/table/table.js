@@ -19,26 +19,33 @@ export const TableContainer = sys(
 );
 
 export const TableSection = styled(TableContainer)`
-	position: sticky;
-	top: 0;
 	border: none;
 
 	& > tr > th,
 	& > tr:last-of-type > td {
 		border-bottom: none;
 	}
+
+	& > tr > td:last-of-type {
+		border-right: none;
+	}
 `;
 
 export const TableCell = sys(
 	{
-		p: [3, 4],
+		p: 3,
 		fontSize: '1.1rem',
 		bg: 'transparent'
 	},
 	'textAlign',
+	'display',
+	'flex',
+	'alignItems',
+	'justifyContent',
 	'maxWidth',
 	() => `
 		border-bottom: 1px solid;
+		border-right: 1px solid;
 		border-color: #eeeff1;
 	`
 );

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styled, { ThemeProvider } from 'styled-components';
 import { themeGet } from 'styled-system';
 import { systemFonts } from 'utils';
+import ToggleStyles from './toggle';
 import colors from './colors';
 
 export const theme = {
@@ -44,6 +45,8 @@ const BaseFont = styled.div`
 	::selection {
 		background: rgba(0, 122, 255, .4);
 	}
+
+	${ToggleStyles};
 `;
 
 export default class VoiceTheme extends Component {

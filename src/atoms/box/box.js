@@ -1,4 +1,5 @@
 import sys from 'system-components';
+import { fontSize } from 'utils';
 
 const Box = sys(
 	'flex',
@@ -7,6 +8,7 @@ const Box = sys(
 	'justifyContent',
 	'color',
 	'space',
+	'borderRadius',
 	'flexDirection',
 	'flexWrap',
 	'flexBasis',
@@ -20,7 +22,10 @@ const Box = sys(
 	'height',
 	'boxShadow',
 	'textAlign',
-	'fontWeight'
+	'fontWeight',
+	() => `
+		${fontSize};
+	`
 );
 
 export default Box;

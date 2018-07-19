@@ -12,13 +12,14 @@ storiesOf('Molecules/Inline Form', module)
 	.add('simple input', () => (
 		<InlineForm
 			inputAttributes={object('input', {
-				type: 'email', name: 'email'
+				type: 'email', name: 'email', gray: true
 			})}
 			buttonAttributes={{
 				text: text('text', 'Submit', 'button controls'),
 				type: select('type', ['primary', 'secondary', 'tertiary'], 'primary', 'button controls')
 			}}
 			label="Email"
+
 			onSubmit={action('submit form')}
 		/>
 	));

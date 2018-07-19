@@ -1,6 +1,6 @@
 {
   "name": "vc-components",
-  "version": "1.0.34",
+  "version": "1.0.49",
   "description": "Voice Computer component library",
   "main": "dist/index.js",
   "repository": "https://github.com/joshferrell/vc-components",
@@ -63,6 +63,8 @@
     "gatsby-link": "^1.6.44",
     "react-aim": "^0.2.2",
     "react-router-dom": "^4.3.1",
+    "react-spring": "^5.4.0",
+    "react-toggle": "^4.0.2",
     "webfontloader": "^1.6.28"
   },
   "scripts": {

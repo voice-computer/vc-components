@@ -26,5 +26,9 @@ storiesOf('Molecules/Table', module)
 					{ text: 'Voice-Controlled mouse' }]
 			]}
 			boxShadow={2}
+			buttonAttributes={{
+				text: 'asdf',
+				onClick: () => {}
+			}}
 		/>
 	));

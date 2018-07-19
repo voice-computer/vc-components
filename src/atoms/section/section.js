@@ -46,5 +46,7 @@ export const SectionContainer = sys(
 	'alignItems',
 	'maxWidth',
 	'boxShadow',
-	'borderRadius'
+	'borderRadius',
+	'zIndex',
+	'border',
 );

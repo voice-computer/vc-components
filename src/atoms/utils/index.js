@@ -1,1 +1,2 @@
-export { default as HiddenText } from './hidden-text'; //eslint-disable-line
+export { default as HiddenText } from './hidden-text';
+export { default as LinkWrapper } from './link-wrapper';

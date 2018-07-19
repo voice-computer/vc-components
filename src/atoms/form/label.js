@@ -1,11 +1,7 @@
 import styled, { css } from 'styled-components';
-import { space } from 'styled-system';
+import sys from 'system-components';
 
 const blockedLabel = css`
-	display: flex;
-	flex-flow: column nowrap;
-	align-items: flex-start;
-
 	& > input:last-of-type {
 		margin-top: 4px;
 		box-sizing: border-box;
@@ -16,9 +12,10 @@ const blockedLabel = css`
 const inlineLabel = css`
 	display: grid;
 	grid-template-columns: 200px 1fr;
-	align-items: center;
+	align-items: ${props => props.alignItems || 'center'};
 
 	@media (max-width: 40rem) {
+		display: block;
 		${blockedLabel};
 	}
 `;
@@ -28,8 +25,12 @@ const noStyle = css`
 	padding: 0;
 `;
 
-const Label = styled.label`
-	${space};
+const makeLabel = sys({
+	is: 'label'
+}, 'display', 'space', 'color', 'alignItems', 'justifyContent', 'flexWrap', 'flexDirection');
+
+const Label = styled(makeLabel)`
+	transition: color .2s ease-in-out;
 	${props => (props.nostyle ? noStyle : props.inline ? inlineLabel : blockedLabel)};
 `;
 

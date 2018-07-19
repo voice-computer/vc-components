@@ -4,9 +4,9 @@ import { themeGet } from 'styled-system';
 
 const color = (props) => {
 	const newColor = themeGet(`colors.${props.type}.main`)(props);
-	return props.type === 'secondary' ?
-		darken(0.1, newColor) :
-		lighten(0.1, newColor);
+	return props.type === 'primary' ?
+		lighten(0.1, newColor) :
+		darken(0.1, newColor);
 };
 
 const hover = css`

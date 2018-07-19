@@ -13,6 +13,7 @@ export const icons = {
 	people: 'People',
 	company: 'Company',
 	book: 'Book',
+	switch: 'Switch',
 	chat: 'Chat'
 };
 

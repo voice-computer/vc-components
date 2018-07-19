@@ -10,3 +10,4 @@ export { default as Chat } from './chat';
 export { default as Company } from './company';
 export { default as People } from './people';
 export { default as Phone } from './phone';
+export { default as Switch } from './switch';

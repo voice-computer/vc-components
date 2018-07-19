@@ -20,6 +20,7 @@ const Container = styled.div`
 	position: sticky;
 	top: 0;
 	display: none;
+	z-index: 900;
 
 	@media (max-width: 880px) {
 		display: block;
@@ -41,6 +42,7 @@ export default class MobileMenu extends Component {
 	state = { expanded: false }
 
 	toggleMenu = () => this.setState(({ expanded }) => ({ expanded: !expanded }))
+	dismissMenu = () => this.setState({ expanded: false });
 
 	renderMenuIcon = () => (
 		<Icon
@@ -54,13 +56,20 @@ export default class MobileMenu extends Component {
 		<Box bg="rgba(256, 256, 256, .95)">
 			<NavWrapper>
 				{this.props.cta && this.renderCTA()}
-				{this.props.renderMenu()}
+				{this.props.renderMenu(this.dismissMenu)}
 			</NavWrapper>
 		</Box>
 	)
 
 	renderCTA = () => (
-		<ArrowButtonLink justifyContent="flex-start" to="/sign-up" type="secondary" width="100%" py={2}>
+		<ArrowButtonLink
+			onClick={this.dismissMenu}
+			justifyContent="flex-start"
+			to="/sign-up"
+			type="secondary"
+			width="100%"
+			py={2}
+		>
 			Try Voice Computer
 		</ArrowButtonLink>
 	)
@@ -70,9 +79,9 @@ export default class MobileMenu extends Component {
 			<Nav bg="white">
 				<div>
 					<SiteTitle>
-						<ButtonLink to="/" color="white" squared py="0" px={3} height="33px">
+						<ButtonLink to="/" color="white" squared py="0" px={3} height="100%">
 							<LogoWrapper>
-								<Logo type="landscape" color="white" />
+								<Logo height="100%" type="landscape" color="white" />
 							</LogoWrapper>
 						</ButtonLink>
 					</SiteTitle>
