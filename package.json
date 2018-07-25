@@ -1,6 +1,6 @@
 {
   "name": "vc-components",
-  "version": "1.0.49",
+  "version": "1.0.53",
   "description": "Voice Computer component library",
   "main": "dist/index.js",
   "repository": "https://github.com/joshferrell/vc-components",
@@ -41,6 +41,7 @@
     "polished": "^1.9.2",
     "react-dom": "^16.3.2",
     "react-router": "^4.2.0",
+    "react-storybook-addon-static-markup": "^0.1.0",
     "react-test-renderer": "^16.4.1",
     "storybook-addon-a11y": "^3.1.9",
     "storybook-react-router": "^1.0.1",
@@ -63,6 +64,7 @@
     "gatsby-link": "^1.6.44",
     "react-aim": "^0.2.2",
     "react-router-dom": "^4.3.1",
+    "react-select": "^2.0.0",
     "react-spring": "^5.4.0",
     "react-toggle": "^4.0.2",
     "webfontloader": "^1.6.28"
@@ -73,6 +75,7 @@
     "test": "jest src/",
     "prepublish": "npm run build",
     "publish:docs": "storybook-to-ghpages",
-    "build": "webpack"
+    "build": "webpack",
+	"build:static": "babel-node src/static/build-static.js"
   }
 }

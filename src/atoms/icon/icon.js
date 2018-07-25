@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
-import { space, color, hover } from 'styled-system';
+import { space, color, hover, display, borderRadius, width, height } from 'styled-system';
+import { Spin } from 'animations';
 import iconMapper, { icons } from './icon-names';
 
 // size is one of xs, s, md, lg, xl
@@ -59,19 +60,28 @@ const alignToText = css`
 	use { color: inherit; }
 `;
 
-const SVGWrapper = styled.svg`
+const SVGWrapper = styled.svg.attrs({
+	height: prop => prop.height || iconSize[prop.iconSize],
+	width: prop => prop.width || iconSize[prop.iconSize]
+})`
 	${baseStyles};
 	${space};
 	${hover};
+	${color};
+	${display};
+	${borderRadius};
+	${hover};
+	${width};
+	${height};
 	${prop => prop.type === 'outline' && outlineStyles};
 	${prop => prop.alignToText && alignToText};
 	${prop => (prop.strokeSize === 1 || prop.strokeSize === 3) && oddStroke};
 	${prop => (prop.rotate ? `transform: rotate(${prop.rotate});` : '')};
 
-	height: ${prop => iconSize[prop.iconSize]};
-	width: ${prop => iconSize[prop.iconSize]};
-
 	stroke-width: ${prop => strokeSize[prop.strokeSize]};
+	${props => props.spin && `
+		animation: ${Spin} 1s ease infinite;
+	`};
 `;
 
 const Icon = ({

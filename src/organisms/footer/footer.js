@@ -106,8 +106,8 @@ export default class Footer extends Component {
 	)
 
 	render = () => {
-		const hasNewsLetter = Object.keys(this.props.newsLetter).length;
-		const hasFooterLinks = this.props.links && this.props.links.length;
+		const hasNewsLetter = Boolean(Object.keys(this.props.newsLetter).length);
+		const hasFooterLinks = Boolean(this.props.links && this.props.links.length);
 
 		return (
 			<Section is="footer" bg="neutral.5" color="white" py={[5, 6]} px={[4, 5, 6]}>

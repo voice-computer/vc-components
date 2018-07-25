@@ -8,6 +8,7 @@ const buttonProps = {
 	squared: PropTypes.bool,
 	outline: PropTypes.bool,
 	nostyle: PropTypes.bool,
+	spin: PropTypes.bool,
 	children: PropTypes.node.isRequired
 };
 
@@ -16,10 +17,11 @@ const buttonDefaultProps = {
 	large: false,
 	squared: false,
 	outline: false,
-	nostyle: false
+	nostyle: false,
+	spin: false
 };
 
-export const ArrowButton = ({ children, ...props }) => (
+export const ArrowButton = ({ children, spin, ...props }) => (
 	<Button {...props}>
 		{children}
 		<Icon
@@ -30,6 +32,7 @@ export const ArrowButton = ({ children, ...props }) => (
 			iconSize="sm"
 			aria-hidden
 			pl={3}
+			spin={spin}
 		/>
 	</Button>
 );
@@ -37,10 +40,11 @@ export const ArrowButton = ({ children, ...props }) => (
 ArrowButton.propTypes = buttonProps;
 ArrowButton.defaultProps = buttonDefaultProps;
 
-export const ArrowButtonLink = ({ children, ...props }) => (
+export const ArrowButtonLink = ({ children, spin, ...props }) => (
 	<ButtonLink {...props}>
 		{children}
 		<Icon
+			spin={spin}
 			color={`${props.type}.tertiary`}
 			name="rightArrow"
 			type="outline"

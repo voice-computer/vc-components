@@ -109,6 +109,7 @@ storiesOf('Atoms/Buttons', module)
 				outline={boolean('isOutline', false)}
 				nostyle={boolean('isNoStyle', false)}
 				squared={boolean('isSquared', false)}
+				spin={boolean('spin', false)}
 				extraLarge={boolean('isExtraLarge', false)}
 			>
 				{text('Text', 'I am a simple button')}

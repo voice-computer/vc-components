@@ -9,10 +9,11 @@
 		["module-resolver", {
             "root": ["./src"],
             "alias": {
-                "utils": "./src/utils",
+				"utils": "./src/utils",
                 "theme": "./src/theme",
                 "atoms": "./src/atoms",
-                "styles": "./src/styles"
+                "styles": "./src/styles",
+				"animations": "./src/animations"
             }
         }]
     ]

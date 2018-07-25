@@ -39,10 +39,24 @@ export default class MobileMenu extends Component {
 		className: ''
 	}
 
-	state = { expanded: false }
+	state = { expanded: this.props.isOpen }
 
-	toggleMenu = () => this.setState(({ expanded }) => ({ expanded: !expanded }))
-	dismissMenu = () => this.setState({ expanded: false });
+	toggleMenu = () => {
+		this.setState(({ expanded }) => {
+			if (window !== 'undefined') {
+				const body = document.getElementsByTagName('body')[0];
+				if (!expanded) body.classList.add('no-scroll');
+				else body.classList.remove('no-scroll');
+			}
+			return ({ expanded: !expanded });
+		});
+	}
+
+	dismissMenu = () => {
+		const body = document.getElementsByTagName('body')[0];
+		body.classList.remove('no-scroll');
+		this.setState({ expanded: false });
+	}
 
 	renderMenuIcon = () => (
 		<Icon

@@ -2,7 +2,7 @@ import React from 'react';
 
 /* eslint-disable import/no-extraneous-dependencies */
 import { storiesOf } from '@storybook/react';
-import { select, text, number } from '@storybook/addon-knobs/react';
+import { select, text, number, boolean } from '@storybook/addon-knobs/react';
 /* eslint-enable import/no-extraneous-dependencies */
 
 import Icon from './icon';
@@ -19,6 +19,7 @@ storiesOf('Atoms/Icon', module)
 			strokeSize={select('Stroke', [1, 2, 3, 4])}
 			iconSize={select('Size', ['xs', 'sm', 'md', 'lg', 'xl'])}
 			rotate={text('Rotation', '0deg')}
+			spin={boolean('spin', false)}
 		/>
 	))
 	.add('circle icon', () => (

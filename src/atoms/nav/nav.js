@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+import React from 'react';
+import styled, { css } from 'styled-components';
 import { fontSize } from 'utils';
 import { space, maxWidth, display, color, hover, borderColor, justifyContent } from 'styled-system';
 import Link from 'gatsby-link';
@@ -55,7 +56,7 @@ export const DropdownButton = styled.button.attrs({
 	${color};
 `;
 
-export const NavLink = styled(Link).attrs({
+const linkProps = {
 	fontSize: props => props.fontSize || 1,
 	px: [3, 3, 4],
 	color: props => props.color || 'neutral.4',
@@ -64,7 +65,9 @@ export const NavLink = styled(Link).attrs({
 		color: 'neutral.6',
 		textDecoration: 'underline'
 	}
-})`
+};
+
+const linkStyles = css`
 	display: flex;
 	align-items: center;
 	text-decoration: none;
@@ -74,3 +77,12 @@ export const NavLink = styled(Link).attrs({
 	${color};
 	${justifyContent};
 `;
+
+const InternalNav = styled(Link).attrs(linkProps)`${linkStyles};`;
+const ExternalNav = styled.a.attrs(linkProps)`${linkStyles};`;
+
+export const NavLink = ({ to, href, children, ...props }) => (to ? (
+	<InternalNav to={to} {...props}>{children}</InternalNav>
+) : (
+	<ExternalNav href={href} target="_blank" rel="noopener noreferrer" {...props}>{children}</ExternalNav>
+));

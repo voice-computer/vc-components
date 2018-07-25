@@ -3,12 +3,13 @@ import React from 'react';
 /* eslint-disable import/no-extraneous-dependencies */
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { boolean, text } from '@storybook/addon-knobs/react';
+import { boolean, text, object } from '@storybook/addon-knobs/react';
 /* eslint-enable import/no-extraneous-dependencies */
 
 import Input from './input';
 import Toggle from './toggle';
 import Label from './label';
+import Select from './select';
 
 storiesOf('Atoms/Form', module)
 	.add('input', () => (
@@ -59,5 +60,18 @@ storiesOf('Atoms/Form', module)
 				value: 'annual',
 				render: () => (<p>test</p>)
 			}}
+		/>
+	))
+	.add('select', () => (
+		<Select
+			isMulti={boolean('isMulti', false)}
+			name={text('name', 'example')}
+			isSearchable
+			options={object('options', [
+				{ label: 'First Item', value: '1' },
+				{ label: 'Second Item', value: '2' },
+				{ label: 'Third Item', value: '3' }
+			])}
+			gray={boolean('gray', false)}
 		/>
 	));

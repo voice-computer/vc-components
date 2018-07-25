@@ -20,4 +20,4 @@ export { default as Box } from './box';
 export { default as Divider } from './divider';
 export { TableContainer, TableSection, TableCell } from './table';
 export { default as Dropdown } from './dropdown';
-export { Input, Label, Toggle } from './form';
+export { Input, Label, Toggle, Select } from './form';

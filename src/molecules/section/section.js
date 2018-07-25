@@ -6,7 +6,6 @@ const Section = ({
 	titleAttributes,
 	subtitleAttributes,
 	renderFooter,
-	center,
 	children,
 	headerDivider,
 	...props
@@ -42,7 +41,6 @@ Section.propTypes = {
 	}),
 	renderFooter: PropTypes.func,
 	headerDivider: PropTypes.string,
-	center: PropTypes.bool,
 	children: PropTypes.node
 };
 
@@ -59,7 +57,6 @@ Section.defaultProps = {
 		fontSize: 1
 	},
 	headerDivider: null,
-	center: false,
 	children: null
 };
 

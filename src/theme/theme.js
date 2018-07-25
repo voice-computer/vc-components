@@ -1,10 +1,23 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import styled, { ThemeProvider } from 'styled-components';
+import styled, { ThemeProvider, injectGlobal } from 'styled-components';
 import { themeGet } from 'styled-system';
 import { systemFonts } from 'utils';
 import ToggleStyles from './toggle';
 import colors from './colors';
+
+/* eslint-disable */
+injectGlobal`
+	body {
+		margin: 0;
+	}
+
+	.no-scroll {
+		height: 100vh;
+		overflow-y: hidden;
+	}
+`;
+/* eslint-enable */
 
 export const theme = {
 	fonts: {
@@ -29,10 +42,6 @@ const BaseFont = styled.div`
 	font-variant-ligatures: none;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
-
-	body {
-		margin: 0;
-	}
 
 	button,
 	input,
