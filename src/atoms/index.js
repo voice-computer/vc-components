@@ -21,3 +21,4 @@ export { default as Divider } from './divider';
 export { TableContainer, TableSection, TableCell } from './table';
 export { default as Dropdown } from './dropdown';
 export { Input, Label, Toggle, Select } from './form';
+export { Subtitle, Title, Header } from './typography';

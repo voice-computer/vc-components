@@ -88,7 +88,7 @@ export default class InlineForm extends Component {
 		const { text, ...attributes } = buttonAttributes;
 		if (success) return this.renderMessage(true);
 		return (
-			<React.Fragment>
+			<div>
 				<Form onSubmit={this.handleSubmit}>
 					<Label>
 						<HiddenText>{label}</HiddenText>
@@ -105,7 +105,7 @@ export default class InlineForm extends Component {
 					</ArrowButton>
 				</Form>
 				{error && this.renderMessage(false)}
-			</React.Fragment>
+			</div>
 		);
 	}
 }

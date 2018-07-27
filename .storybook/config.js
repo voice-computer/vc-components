@@ -5,7 +5,6 @@ import infoAddon, { setDefaults } from '@storybook/addon-info';
 import StoryRouter from 'storybook-react-router';
 import { checkA11y } from 'storybook-addon-a11y';
 import { withKnobs } from '@storybook/addon-knobs/react';
-import staticMarkup from 'react-storybook-addon-static-markup';
 import '@storybook/addon-console';
 
 import Theme from 'theme';
@@ -15,7 +14,7 @@ const req = require.context('../src', true, /\.stories\.js$/);
 // Configure withInfo addon
 setDefaults({ inline: false, source: false });
 setAddon(infoAddon);
-setAddon(staticMarkup);
+
 // Configure storybook react router
 addDecorator(StoryRouter());
 addDecorator(withKnobs);

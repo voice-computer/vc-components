@@ -1,25 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import sys from 'system-components';
+import { height } from 'styled-system';
+import styled, { css } from 'styled-components';
 import Link from 'gatsby-link';
 
-const ExternalLink = sys({
-	is: 'a',
-	color: 'inherit',
-	textDecoration: 'none',
-	display: 'block',
-	hover: {
-		color: 'currentColor !important',
-		textDecoration: 'none'
-	}
-}, 'height');
+const nostyle = css`
+	color: inherit;
+	display: block;
+	text-decoration: none;
+	${height};
 
-const InternalLink = ExternalLink.withComponent(Link);
+	&:hover {
+		color: currentColor;
+		text-decoration: none;
+	}
+`;
+
+const ExternalLink = styled.a`${nostyle}`;
+const InternalLink = styled(Link)`${nostyle}`;
 
 const LinkWrapper = ({ to, href, children, ...props }) => {
 	if (to) return <InternalLink to={to} {...props}>{children}</InternalLink>;
 	else if (href) return <ExternalLink href={href} {...props} target="_blank" rel="noopener noreferrer">{children}</ExternalLink>;
-	return <span>{children}</span>;
+	return children;
 };
 
 export default LinkWrapper;
