@@ -11,3 +11,8 @@ export { default as Company } from './company';
 export { default as People } from './people';
 export { default as Phone } from './phone';
 export { default as Switch } from './switch';
+export { default as Facebook } from './facebook';
+export { default as Mail } from './mail';
+export { default as Medium } from './medium';
+export { default as Twitter } from './twitter';
+export { default as Youtube } from './youtube';

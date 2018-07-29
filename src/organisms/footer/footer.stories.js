@@ -47,5 +47,27 @@ storiesOf('Organisms/Footer', module)
 					Copyright &copy; VoiceTeach LLC. All rights reserved.
 				</div>
 			)}
+			socialLinks={[
+				{
+					name: 'facebook',
+					text: 'Follow us on Facebook',
+					href: 'http://facebook.com'
+				},
+				{
+					name: 'facebook',
+					text: 'Follow us on Facebook',
+					href: 'http://facebook.com'
+				},
+				{
+					name: 'facebook',
+					text: 'Follow us on Facebook',
+					href: 'http://facebook.com'
+				},
+				{
+					name: 'facebook',
+					text: 'Follow us on Facebook',
+					href: 'http://facebook.com'
+				}
+			]}
 		/>
 	));

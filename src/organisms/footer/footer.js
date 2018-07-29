@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import sys from 'system-components';
 import styled, { css } from 'styled-components';
 import Link from 'gatsby-link';
-import { Box, HiddenText, Logo } from 'atoms';
+import { Box, HiddenText, Logo, LinkWrapper, Icon } from 'atoms';
 import { Section, InlineForm } from 'molecules';
 import { fontSize } from 'utils';
 
@@ -62,16 +62,37 @@ export default class Footer extends Component {
 				text: PropTypes.string.isRequired
 			}))
 		})),
+		socialLinks: PropTypes.arrayOf(PropTypes.shape({
+			href: PropTypes.string.isRequired,
+			text: PropTypes.string.isRequired,
+			name: PropTypes.string.isRequired
+		})),
 		title: PropTypes.string.isRequired
 	}
 
 	static defaultProps = {
 		newsLetter: {},
 		renderLegal: null,
-		links: null
+		links: null,
+		socialLinks: []
 	}
 
-	renderSocial = ({ title }) => (
+	renderSocial = ({ href, name, text }) => (
+		<LinkWrapper key="name" href={href}>
+			<HiddenText>{text}</HiddenText>
+			<Icon
+				p={2}
+				color="white"
+				name={name}
+				aria-hidden
+				hover={{
+					color: 'tertiary.main'
+				}}
+			/>
+		</LinkWrapper>
+	)
+
+	renderLogoSection = ({ title, socialLinks }) => (
 		<Box is="header" flex="1" m={[3, 2]} maxWidth="300px" minWidth="150px">
 			<h1>
 				<ImageLink to="/">
@@ -79,6 +100,11 @@ export default class Footer extends Component {
 					<Logo type="icon" aria-hidden color="white" width="100px" />
 				</ImageLink>
 			</h1>
+			{Boolean(socialLinks.length) && (
+				<Box display="flex" flexWrap="wrap" mx={-2}>
+					{socialLinks.map(this.renderSocial)}
+				</Box>
+			)}
 		</Box>
 	)
 
@@ -112,7 +138,7 @@ export default class Footer extends Component {
 		return (
 			<Section is="footer" bg="neutral.5" color="white" py={[5, 6]} px={[4, 5, 6]}>
 				<Box display="flex" flexWrap="wrap" alignItems="flex-start">
-					{this.renderSocial(this.props)}
+					{this.renderLogoSection(this.props)}
 					<Box is="div" flex="2 800px" m={[3, 2]}>
 						{hasFooterLinks && (
 							<FooterLinkContainer>

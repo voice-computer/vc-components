@@ -14,7 +14,12 @@ export const icons = {
 	company: 'Company',
 	book: 'Book',
 	switch: 'Switch',
-	chat: 'Chat'
+	chat: 'Chat',
+	facebook: 'Facebook',
+	mail: 'Mail',
+	medium: 'Medium',
+	twitter: 'Twitter',
+	youtube: 'Youtube'
 };
 
 const Icon = (icon, type) => {
