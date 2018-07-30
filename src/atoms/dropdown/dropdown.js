@@ -35,7 +35,7 @@ const Dropdown = styled.div.attrs({
 		border-color: rgba(255, 255, 255, 0);
 		border-bottom-color: #ffffff;
 		border-width: 9px;
-		left: 50%;
+		left: ${props => props.arrowPosition || '50%'};
 		margin-left: -9px;
 	}
 
@@ -43,7 +43,7 @@ const Dropdown = styled.div.attrs({
 		border-color: rgba(113, 158, 206, 0);
 		border-bottom-color: #ececec;
 		border-width: 10px;
-		left: 50%;
+		left: ${props => props.arrowPosition || '50%'};
 		margin-left: -10px;
 	}
 

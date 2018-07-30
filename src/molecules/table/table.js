@@ -17,11 +17,15 @@ export default class Table extends Component {
 			iconAttributes: {
 				name: PropTypes.string
 			}
-		}))).isRequired
+		}))).isRequired,
+		headerAttributes: PropTypes.object, /* eslint-disable-line */
+		bodyAttributes: PropTypes.object /* eslint-disable-line */
 	}
 
 	static defaultProps = {
-		buttonAttributes: {}
+		buttonAttributes: {},
+		headerAttributes: {},
+		bodyAttributes: {}
 	}
 
 	renderCell = ({
@@ -50,14 +54,18 @@ export default class Table extends Component {
 
 	render = () => {
 		const {
-			headerCells, bodyCells, buttonAttributes, ...props
+			headerCells, bodyCells, buttonAttributes, headerAttributes, bodyAttributes, ...props
 		} = this.props;
+
+		const headAttrs = Object.assign({}, { bg: 'neutral.1', is: 'thead' }, headerAttributes);
+		const bodyAttrs = Object.assign({}, { is: 'tbody' }, bodyAttributes);
+
 		return (
 			<TableContainer {...props} cellspacing="0" cellpadding="0">
-				<TableSection is="thead" bg="neutral.1">
+				<TableSection {...headAttrs}>
 					<tr>{headerCells.map(this.renderHeaderCell)}</tr>
 				</TableSection>
-				<TableSection is="tbody">
+				<TableSection {...bodyAttrs}>
 					{bodyCells.map((row, i) => (
 						<tr key={i}>{row.map(this.renderCell)}</tr> // eslint-disable-line
 					))}

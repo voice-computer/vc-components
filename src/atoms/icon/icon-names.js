@@ -19,7 +19,10 @@ export const icons = {
 	mail: 'Mail',
 	medium: 'Medium',
 	twitter: 'Twitter',
-	youtube: 'Youtube'
+	youtube: 'Youtube',
+	user: 'User',
+	award: 'Award',
+	card: 'Card'
 };
 
 const Icon = (icon, type) => {

@@ -16,3 +16,6 @@ export { default as Mail } from './mail';
 export { default as Medium } from './medium';
 export { default as Twitter } from './twitter';
 export { default as Youtube } from './youtube';
+export { default as User } from './user';
+export { default as Card } from './card';
+export { default as Award } from './award';

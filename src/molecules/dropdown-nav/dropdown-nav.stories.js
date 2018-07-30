@@ -19,5 +19,16 @@ storiesOf('Molecules/Dropdown Nav', module)
 			<DropdownNav title={text('title', 'Test Link')}>
 				asdf
 			</DropdownNav>
+			<DropdownNav
+				title={text('title', 'Test Link')}
+				iconAttributes={{
+					name: 'facebook',
+					color: 'primary.main',
+					iconSize: 'sm',
+					mr: 2
+				}}
+			>
+				asdf
+			</DropdownNav>
 		</nav>
 	));
